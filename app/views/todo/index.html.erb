@@ -1,14 +1,38 @@
-<h1>Todo list here</h1>
+<div class="navbar bg-dark text-light">
+    <ul>
+        <li class="nav-link">name</li>
+    </ul>
+</div>
 
-<ul>
-    <%@todo.all.each do |f|%>
-        <li><%=f.description%></li>
-       
-        <%=link_to "Show_Todo" ,todo_path(f.id)%>
-        <%=link_to "Edit_Todo" ,edit_todo_path(f.id)%>
-        <%=link_to "Delete_Todo",todo_path(f.id), method: :delete, data:{confirm: 'Are you sure ?'}%>
-    <%end%>
+<div class = "container">
 
-<ul>
+    <%= link_to "Create",new_todo_path, :class => "btn btn-outline-success my-4"  %>
 
-<%=link_to "new_todo" ,new_todo_path%>
+    <table class = "table border table-hover shadow table-striped">
+        <tr>
+            <th>S.N</th>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Option</th>
+        </tr>
+            <%count = 0%>
+          <% @todo.each do |f| %>
+            <tr>
+                
+                <td><%=f.id%></td>
+                <td> <%=f.description%> </td>
+                <td></td>
+                <td>    
+                    <%=link_to "View",todo_path(f.id), :class =>"btn btn-outline-primary"%>
+                    <%=link_to "Edit", edit_todo_path(f.id), :class =>"btn btn-outline-info"%>
+                    <%=link_to "X", todo_path(f.id), method: :delete, data:{confirm: 'Are you sure ?'}, :class =>"btn btn-outline-danger"%>
+                </td>
+                
+            </tr>
+        <% end %>
+    </table>
+        
+
+
+    
+</div>
