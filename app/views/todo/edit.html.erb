@@ -1,12 +1,31 @@
 
+<div class="navbar bg-info text-light">
+    
+        <h1 ><a href="/todo" class="nav-link ">Mero Task</a></h1>
+</div>
 
 
 
 
 
 <%= form_for :todo, url:{ action: :update }, method: :put do |f| %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.submit "Update Todo" %>
+  <div class = "container">
+    <div class = "row ">
+      <div class = " d-flex justify-content-center   ">
+        <div class = "col-md-4 border shadow rounded p-5 m-5">
+          <div class = "form-group ">
+
+            <%= f.label "Update My Task", :class =>"form-label text-danger mb-0"  %>
+            <hr>
+            <%= f.text_field :description, :class =>"form-control my-4" %>
+            <%= f.submit "Correct", :class =>"btn btn-outline-primary my-3" %>
+            <button class = "btn btn-danger">Cancel</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
 
