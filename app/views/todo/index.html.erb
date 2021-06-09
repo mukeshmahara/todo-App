@@ -1,0 +1,14 @@
+<h1>Todo list here</h1>
+
+<ul>
+    <%@todo.all.each do |f|%>
+        <li><%=f.description%></li>
+       
+        <%=link_to "Show_Todo" ,todo_path(f.id)%>
+        <%=link_to "Edit_Todo" ,edit_todo_path(f.id)%>
+        <%=link_to "Delete_Todo",todo_path(f.id), method: :delete, data:{confirm: 'Are you sure ?'}%>
+    <%end%>
+
+<ul>
+
+<%=link_to "new_todo" ,new_todo_path%>
