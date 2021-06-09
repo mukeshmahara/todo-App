@@ -1,1 +1,22 @@
-<h1>   <%=@todo.description%> </h1>
+<div class="navbar bg-info text-light">
+    
+        <h1 ><a href="/todo" class="nav-link ">Mero Task</a></h1>
+</div>
+
+<div class = "container">
+
+    <div class = "row">
+        <div class="d-flex justify-content-center my-5">
+
+            <div class = "col-md-4">
+               <ul><li> <%=@todo.description%></li></ul>
+                <div class="mx-3">
+                 <%= link_to "Add Your Daily Task",new_todo_path, :class => "btn btn-outline-success my-4 "  %>
+               <a href="/todo" class="btn btn-danger  ">back</a></div>
+
+            </div>
+        
+        </div>
+    </div>
+
+</div>
