@@ -4,13 +4,12 @@
 // that code so it'll be compiled.
 
 
-require("bootstrap")
+require("bootstrap") //requiring bootstrap
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-
-require("bootstrap")
+// importing bootstrap
 import "../stylesheets/application";
 document.addEventListener("turbolinks:load", function() {
     $(function () {
