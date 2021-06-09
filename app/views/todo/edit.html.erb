@@ -17,7 +17,7 @@
 
             <%= f.label "Update My Task", :class =>"form-label text-danger mb-0"  %>
             <hr>
-            <%= f.text_field :description, :class =>"form-control my-4" %>
+            <%= f.text_field :description, :class =>"form-control my-4" , required: true %>
             <%= f.submit "Correct", :class =>"btn btn-outline-primary my-3" %>
             <button class = "btn btn-danger">Cancel</button>
 
@@ -29,3 +29,4 @@
   </div>
 <% end %>
 
+<div class = "fixed-bottom d-flex justify-content-center text-light bg-dark">Developed by &copy; Mukesh Mahara</div>

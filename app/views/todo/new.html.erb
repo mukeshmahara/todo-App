@@ -13,7 +13,7 @@
           <div class = "form-group border p-4 rounded shadow">
 
             <%= f.label "Task", :class =>"form-label"%>
-            <%= f.text_field :description, :class =>"form-control" %>
+            <%= f.text_field :description, :class =>"form-control", required: true %>
             <%= f.submit "Add Task", :class =>"btn btn-outline-primary my-3" %>
             <a href="/todo" class="btn btn-danger">Cancel</a>
           </div>
@@ -24,3 +24,4 @@
   </div>
 <% end %>
 
+<div class = "fixed-bottom d-flex justify-content-center text-light bg-dark">Developed by &copy; Mukesh Mahara</div>

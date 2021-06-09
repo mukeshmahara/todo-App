@@ -19,21 +19,26 @@
 
           <% @todo.each do |f| %>
             <tr>
+
                 
                 <td><%=f.created_at%></td>
                 <td > <%=f.description%> </td>
                 <td>Completed</td>
                 <td>    
-                    <%=link_to "View",todo_path(f.id), :class =>"btn btn-outline-primary"%>
-                    <%=link_to "Edit", edit_todo_path(f.id), :class =>"btn btn-outline-info"%>
-                    <%=link_to "X", todo_path(f.id), method: :delete, data:{confirm: 'Are you sure ?'}, :class =>"btn btn-outline-danger"%>
+                    <%=link_to "",todo_path(f.id), :class =>"btn btn-outline-secondary fa fa-eye tooltips","data-toggle" =>"tooltip", "data-placement" =>"top", 'title' => "view"%>
+                    <%=link_to "", edit_todo_path(f.id), :class =>"btn btn-outline-info fa fa-edit tooltips","data-toggle" =>"tooltip", "data-placement" =>"top", 'title' => "edit"%>
+                    <%=link_to "", todo_path(f.id), method: :delete, data:{confirm: 'Are you sure ?'}, :class =>"btn btn-outline-danger fa fa-trash-alt tooltips","data-toggle" =>"tooltip", "data-placement" =>"top", 'title' => "delete"%>
                 </td>
-                
+
+
             </tr>
         <% end %>
+
     </table>
         
 
 
     
 </div>
+
+<div class = "fixed-bottom d-flex justify-content-center text-light bg-dark">Developed by &copy; Mukesh Mahara</div>
