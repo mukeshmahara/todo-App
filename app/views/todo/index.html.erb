@@ -1,27 +1,28 @@
-<div class="navbar bg-dark text-light">
-    <ul>
-        <li class="nav-link">name</li>
-    </ul>
+
+
+<div class="navbar bg-info text-light">
+    
+        <h1 ><a href="/todo" class="nav-link ">Mero Task</a></h1>
 </div>
 
 <div class = "container">
 
-    <%= link_to "Create",new_todo_path, :class => "btn btn-outline-success my-4"  %>
+    <%= link_to "Add Your Daily Task",new_todo_path, :class => "btn btn-outline-success my-4 w-100"  %>
 
-    <table class = "table border table-hover shadow table-striped">
+    <table class = "table border table-hover shadow table-striped text-center">
         <tr>
-            <th>S.N</th>
+            <th>Created At</th>
             <th>Task</th>
             <th>Status</th>
             <th>Option</th>
         </tr>
-            <%count = 0%>
+
           <% @todo.each do |f| %>
             <tr>
                 
-                <td><%=f.id%></td>
-                <td> <%=f.description%> </td>
-                <td></td>
+                <td><%=f.created_at%></td>
+                <td > <%=f.description%> </td>
+                <td>Completed</td>
                 <td>    
                     <%=link_to "View",todo_path(f.id), :class =>"btn btn-outline-primary"%>
                     <%=link_to "Edit", edit_todo_path(f.id), :class =>"btn btn-outline-info"%>
