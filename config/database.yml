@@ -22,21 +22,22 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  # database: db/production.sqlite3
+  database: todo
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: store_development
-  pool: 5
-  username: postgres
-  password: postgres
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: todo
+#   pool: 5
+#   username: postgres
+#   password: postgres
 
 
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: store_test
-  pool: 5
-  username: postgres
-  password: postgres
+# test:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: todo
+#   pool: 5
+#   username: postgres
+#   password: postgres
